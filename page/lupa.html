@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lupa Password | AjemTrip</title>
+    <link rel="stylesheet" href="../css/lupalogin.css">
+</head>
+<body>
+    <main class="container">
+        <h3>Reset Password</h3>
+        <p>Masukkan email dan password baru Anda.</p>
+        <form id="forgot-password-form">
+            <label for="email">Email</label><input type="email" id="email" required>
+            <label for="newPassword">Password Baru</label><input type="password" id="newPassword" minlength="6" required>
+            <label for="confirmPassword">Konfirmasi Password</label><input type="password" id="confirmPassword" minlength="6" required>
+            <button type="submit">Simpan Password Baru</button>
+        </form>
+        <p><a href="../indeks.html">Kembali ke login</a></p>
+    </main>
+    <script src="../js/auth.js"></script>
+    <script>
+        document.getElementById('forgot-password-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            if (document.getElementById('newPassword').value !== document.getElementById('confirmPassword').value) {
+                alert('Konfirmasi password tidak sama.');
+                return;
+            }
+            try {
+                AjemAuth.updatePassword(document.getElementById('email').value.trim().toLowerCase(), document.getElementById('newPassword').value);
+                alert('Password berhasil diubah. Silakan login kembali.');
+                window.location.href = '../indeks.html';
+            } catch (error) {
+                alert(error.message);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking</title>
+
+     <!--Font Web Retailku-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+         rel="stylesheet">
+     <!--Feather Icon me-->
+     <script src="https://unpkg.com/feather-icons"></script>
+ 
+    <link rel="stylesheet" href="../css/styleTiket.css">
+    <link rel="shortcut icon" href="../img/Logo Ajem trip.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="../indeks.html" class="navbar-logo">Ajem<span>Trip</span></a>
+
+        <div class="navbar-nav">
+           
+        </div>
+    
+        <div class="navbar-extra">
+            <a href="./hasil.html" id="keluar"><i data-feather="x"></i></a>
+        </div>
+    </nav>
+
+    <nav class="hero" id="home"> 
+
+    </nav>
+
+    <div class="container">
+        <h1>Booking Tiket Ajem<span>Trip</span></h1>
+        <form id="bookingForm">
+        <div class="pesanan">
+            <h2>Isi Tiket Pemesanan</h2>
+            <div class="form-group">
+                <label for="checkInDate">Tanggal Kepergian:</label>
+                <input type="date" id="checkInDate" name="checkInDate" required>
+            </div>
+            <div class="form-group">
+                <label for="checkOutDate">Tanggal Kepulangan:</label>
+                <input type="date" id="checkOutDate" name="checkOutDate" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Jumlah Tiket/Kamar:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+            </div>
+            <div class="form-group">
+                <label for="seat">Nomor kursi/kamar (opsional):</label>
+                <input type="text" id="seat" name="seat" placeholder="Contoh: 12A">
+            </div>
+        </div>
+
+        <div class="data">
+            <h2>Isi Data Pribadi</h2>
+            <div class="form-group">
+                <label for="name">Nama Pemesan:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="nik">NIK:</label>
+                <input type="text" id="nik" name="nik" required>
+            </div>
+        </div>
+            <button type="submit">Lanjut ke Pembayaran</button>
+        </form>
+    </div>
+    
+    <script>
+        feather.replace();
+    </script>
+    
+    <script src="../js/scriptTiket.js"></script>
+</body>
+</html>

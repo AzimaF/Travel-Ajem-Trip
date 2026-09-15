@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+
+     <!--Font Web Retailku-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+         rel="stylesheet">
+     <!--Feather Icon me-->
+     <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="../css/stylePembayaran.css">
+    <link rel="shortcut icon" href="../img/Logo Ajem trip.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">Ajem<span>Trip</span></a>
+
+        <div class="navbar-nav">
+           
+        </div>
+    
+        <div class="navbar-extra">
+            <a href="./tiket.html" id="keluar"><i data-feather="x"></i></a>
+        </div>
+    </nav>
+
+    <nav class="hero" id="home"> 
+
+    </nav>
+
+    <header>
+        <h1>Pembayaran Tiket</h1>
+    </header>
+
+    <main>
+        <section class="booking-summary">
+            <h2>Detail Pemesanan</h2>
+            <div class="booking-details">
+                <div class="flight-details">
+                    <h3>Detail Penerbangan</h3>
+                    <p><strong>Dari:</strong> Jakarta</p>
+                    <p><strong>Menuju:</strong> Bali</p>
+                    <p><strong>Tanggal:</strong> 20 July 2024</p>
+                    <p><strong>Tiket Pesawat:</strong> Air Asia</p>
+                    <p><strong>Harga:</strong> Rp.500.000,00</p>
+                </div>
+                <div class="hotel-details">
+                    <h3>Detail Hotel</h3>
+                    <p><strong>Hotel:</strong> Bali Resort</p>
+                    <p><strong>Check-in:</strong> 20 July 2024</p>
+                    <p><strong>Check-out:</strong> 25 July 2024</p>
+                    <p><strong>Tipe Kamar:</strong> Deluxe</p>
+                    <p><strong>Harga:</strong> Rp.150.000,00</p>
+                </div>
+            </div>
+        </section>
+        <section class="payment-method">
+            <h2>Metode Pembayaran</h2>
+            <form action="/submit-payment" method="POST" id="payment-form">
+                <div class="payment-option">
+                    <label for="card-number">Kartu Bank</label>
+                    <input type="text" id="card-number" name="card-number" required>
+                </div>
+                <div class="payment-option">
+                    <label for="expiry-date">Tanggal Kadaluarsa</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+                </div>
+                <div class="payment-option">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+                <div class="payment-option">
+                    <label for="name-on-card">Nama pada kartu bank</label>
+                    <input type="text" id="name-on-card" name="name-on-card" required>
+                </div>
+                <button type="submit">Lakukan Pembayaran</button>
+            </form>
+        </section>
+        <section class="total-amount">
+            <h2>Total Pembayaran</h2>
+            <p><strong>Total:</strong> Rp.650.000,00</p>
+        </section>
+    </main>
+<footer>
+
+</footer>
+    <script>
+        feather.replace();
+    </script>
+    
+    <script src="../js/pembayaran.js"></script>
+</body>
+</html>

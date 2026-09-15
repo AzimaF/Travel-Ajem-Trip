@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Repetition</title>
+
+     <!--Font Web Retailku-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+         rel="stylesheet">
+     <!--Feather Icon me-->
+     <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="../css/stylePengulangan.css">
+    <link rel="shortcut icon" href="../img/Logo Ajem trip.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">Ajem<span>Trip</span></a>
+
+        <div class="navbar-nav">
+            <a id="home">Pengulangan Jadwal Tiket</a>
+            <a href="../page/pembatalan.html">Pembatalan Tiket</a>
+        </div>
+    
+        <div class="navbar-extra">
+            <a href="../indeks.html" id="keluar"><i data-feather="x"></i></a>
+        </div>
+    </nav>
+
+    <nav class="hero" id="home"> 
+
+    </nav>
+    <div class="container">
+        <h1>Pengulangan Jadwal Tiket</h1>
+        <form id="scheduleForm">
+        
+            <label for="startDate">Tanggal Kepergian:</label>
+            <input type="date" id="startDate" name="startDate" required>
+
+            <label for="endDate">Tanggal Kepulangan:</label>
+            <input type="date" id="endDate" name="endDate" required>
+
+            <label for="repeatFrequency">Frekuensi Pengulangan Jadwal:</label>
+            <select id="repeatFrequency" name="repeatFrequency">
+                <option value="daily">Harian</option>
+                <option value="weekly">Mingguan</option>
+                <option value="monthly">Bulanan</option>
+            </select>
+
+            <label for="numGuests">Pilih Kursi/kamar:</label>
+            <input type="number" id="numGuests" name="numGuests" min="1" required>
+           
+
+            <button type="submit">Atur Jadwal</button>
+        </form>
+
+        <div id="scheduleList"></div>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
+
+    <script src="../js/scriptPengulangan.js"></script>
+</body>
+</html>

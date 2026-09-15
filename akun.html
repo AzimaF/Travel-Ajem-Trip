@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya | AjemTrip</title>
+
+    <!--Font Web Retailku-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+        rel="stylesheet">
+    <!--Feather Icon me-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!--My Style Css-->
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="shortcut icon" href="./img/Logo Ajem trip.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!--Navbar start-->
+    <header>
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">Ajem<span>Trip</span></a>
+
+        <div class="navbar-nav">
+            <a href="#home">Home</a>
+            <a href="#menu">Holiday</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Your Tiket</a>
+        </div>
+    
+        <div class="navbar-extra">
+            <a href="#" id="search-button"><i data-feather="search"></i></a>
+            <a href="#" id="notif"><i data-feather="bell"></i></a>
+            <a href="#" id="akun"><i data-feather="user"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+        
+
+        <div class="search-form">
+            <input type="text" id="search-box" placeholder="search">
+            <label for="search-box"><i data-feather="search"></i></label>
+          </div>
+    </nav>
+    </header>
+    <!--Navbar end-->
+
+    <!-- Hero section start-->
+     <header>
+    <nav class="hero" id="home">
+        <main class="content">
+            <h1>Ayo Berkunjung Ke Web Ajem<span>Trip</span></h1>
+            <p>Liburan telah tiba pastikan pembelian anda di Ajem<span>Trip</span></p>
+            <a href="./page/filter.html" class="cta">Pesan Tiket Sekarang &nbsp; <i data-feather="search"></i></a>
+        </main>
+    </nav>
+    </header>
+    <!-- Hero section end-->
+
+    <!-- Menu Section Start -->
+    <section id="menu" class="menu">
+        <h2><span>Berliburlah</span>Sekarang</h2>
+        <p>Booking penginapan dan perjalanan anda sekarang juga!.</p>
+        <div class="row">
+            <div class="menu-card">
+                <img src="img/gambar kereta ajemtrip.jpg" alt="Aqua Botol" class="menu-card-img">
+                <h3 class="menu-card-title">- Booking Perjalanan -</h3>
+                <p class="menu-card-price"> </p>
+            </div>
+
+            <div class="menu-card">
+                <img src="img/gambar vila ajemtrip.jpg" alt="Aqua Botol" class="menu-card-img">
+                <h3 class="menu-card-title">- Booking Villa Penginapan -</h3>
+                <p class="menu-card-price"> </p>
+            </div>
+
+            <div class="menu-card">
+                <img src="img/gambar penerbangan ajemtrip.jpg" alt="Rokok Sampoerna" class="menu-card-img">
+                <h3 class="menu-card-title">- Booking Penerbangan -</h3>
+                <p class="menu-card-price"> </p>
+            </div>
+
+            <div class="menu-card">
+                <img src="img/gambar hotel ajemtrip.jpg" alt="Sampo Lifebouy" class="menu-card-img">
+                <h3 class="menu-card-title">- Booking Hotel Penginapan -</h3>
+                <p class="menu-card-price"> </p>
+            </div>
+           
+            <div class="menu-card">
+                <img src="img/gambar perjalanan bus ajemtrip.jpeg" alt="Mie indomie Rebus" class="menu-card-img">
+                <h3 class="menu-card-title">- Booking Perjalanan -</h3>
+                <p class="menu-card-price"> </p>
+            </div>
+        </div>
+    </section>
+    <!-- Menu Section End -->
+
+ <!-- About Section start -->
+ <section id="about" class="about">
+    <h2><span>About</span>Us</h2>
+
+    <div class="row">
+        <div class="about-img">
+            <img src="img/Logo Ajem trip.png" alt="About Me">
+        </div>
+        <div class="content">
+            <h3>Kenapa dinamain AjemTrip?</h3>
+            <p>AjemTrip merupakan sebuah platfrom web yang menyediakan penginapan dan perjalanan anda di Indonesia.
+                AjemTrip membantu Anda merencanakan penginapan serta perjalanan dengan memberikan rekomendasi yang personal, 
+                termasuk destinasi, hotel, penerbangan, restoran, dan atraksi.</p>
+            <p> Semua informasi terkait perjalanan dapat dikelola dalam satu tempat 
+                yang mudah diakses. Jadi, jika Anda ingin pengalaman perjalanan yang lebih efisien dan disesuaikan, 
+                kunjungi AjemTrip! 🌍✈️ </p>
+        </div>
+    </div>
+
+</section>
+<!-- About Section end -->
+
+<section class="about" id="profile">
+    <h2><span>Profil</span> Saya</h2>
+    <div class="content" id="profileContent"></div>
+</section>
+
+<!-- Contact Section Start -->
+<section id="contact" class="tiket">
+    <h2><span>Tiket</span> Pembelian Anda</h2>
+    <div class="row" id="ticketContent"></div>
+</section>
+
+    <!-- Footer Start-->
+    <footer>
+        <div class="socials">
+            <a href="https://www.instagram.com/faoezan.a/?hl=en"><i data-feather="instagram"></i></a>
+            <a href="#"><i data-feather="twitter"></i></a>
+            <a href="#"><i data-feather="facebook"></i></a>
+        </div>
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#menu">Holiday</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Your Tiket</a>
+        </div>
+        <div class="credit">
+            <p> &copy; 2024 <a href="">AjemTrip</a></p>
+        </div>
+    </footer>
+    <!-- Footer End-->
+
+    <!--Feather Icon me-->
+    <script>
+        feather.replace();
+    </script>
+
+    <!-- My Javascript-->
+    <script src="./js/script.js"></script>
+    <script src="./js/auth.js"></script>
+    <script>
+        const profile = AjemAuth.currentUser();
+        document.getElementById('profileContent').innerHTML = profile
+            ? `<h3>${profile.fullName}</h3><p><strong>Username:</strong> ${profile.username}</p><p><strong>Email:</strong> ${profile.email}</p><p><strong>Telepon:</strong> ${profile.phone}</p><p><strong>Status:</strong> Akun aktif</p>`
+            : '<p>Anda belum login. Silakan masuk untuk melihat data pribadi.</p><p><a href="./indeks.html">Masuk ke akun</a></p>';
+        const ticket = JSON.parse(localStorage.getItem('ajemtrip_ticket') || 'null');
+        const ticketContent = document.getElementById('ticketContent');
+        if (ticket) {
+            ticketContent.innerHTML = `<div class="hotel"><div class="barcode"><img src="./img/barcode.png" class="img-barcode" alt="Barcode tiket"></div><div class="result-item"><h3>${ticket.name}</h3><p>Kode tiket: <strong>${ticket.code}</strong></p><p>Rute: ${ticket.origin} → ${ticket.destination}</p><p>Keberangkatan: ${ticket.checkInDate}</p><p>Status: ${ticket.status}</p><p>Total: Rp${(ticket.price * ticket.quantity).toLocaleString('id-ID')}</p></div><div class="cek"><a href="./page/pengulangan.html" id="ceklis" aria-label="Kelola tiket"><i data-feather="chevron-right"></i></a></div></div>`;
+            feather.replace();
+        } else {
+            ticketContent.innerHTML = '<p class="empty-ticket">Belum ada tiket. Yuk mulai perjalananmu sekarang!</p>';
+        }
+    </script>
+</body>
+
+</html>

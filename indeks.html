@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AjemTrip</title>
+
+    <!--Font Web Retailku-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+        rel="stylesheet">
+    <!--Feather Icon me-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!--My Style Css-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/Logo Ajem trip.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!--Navbar start-->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">Ajem<span>Trip</span></a>
+
+        <div class="navbar-nav">
+            <a href="#home">Home</a>
+            <a href="#menu">Holiday</a>
+            <a href="#about">About Us</a>
+        </div>
+    
+        <div class="navbar-extra">
+            <a href="#" id="akun"><i data-feather="user"></i>Sign In</a>
+            <a href="./page/notif.html" id="notif" aria-label="Notifikasi"><i data-feather="bell"></i></a>
+            <a href="./page/Register.html" id="daftar">Register</a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+    </nav>
+    <!--Navbar end-->
+
+    <!-- Hero section start-->
+    <header>
+    <nav class="hero" id="home">
+        <div class="content" >
+            <h1>Ayo Berkunjung Ke Web Ajem<span>Trip</span></h1>
+            <p>Liburan telah tiba pastikan pembelian anda di Ajem<span>Trip</span></p>
+            <a href="./page/filter.html" id="search-button">Pesan Tiket Sekarang<i data-feather="search"></i></a>
+        </div>
+       
+    <div id="main-container">
+        <div id="modal-login" class="modal">
+            
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Sign In</h2>
+                <form id="login-form">
+                    <input type="email" id="login-email" placeholder="Email" required>
+                    <input type="password" id="login-password" placeholder="Password" required>
+
+                    <div class="input-group">
+                        <div class="box-ingat">
+                            <input type="checkbox" id="remember-me" name="remember-me">
+                            <label for="remember-me">Ingat Saya!</label>
+                            
+                        </div>
+                        <div class="lupa-password">
+                            <b class="lupa-password"><a href="./page/lupa.html">Lupa Password?</a></b>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="daftar-button">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    </nav>
+    </header>
+    <!-- Hero section end-->
+
+    <!-- Menu Section Start -->
+    <section id="menu" class="menu">
+        <h2><span>Berliburlah</span>Sekarang</h2>
+        
+        <p>Booking penginapan dan perjalanan anda sekarang juga!.</p>
+        <div class="row">
+            <div class="menu-card">
+                <img src="img/gambar kereta ajemtrip.jpg" alt="Aqua Botol" class="menu-card-img">
+                <h3 class="menu-card-title">- Booking Perjalanan -</h3>
+                <p class="menu-card-price"> </p>
+            </div>
+
+            <div class="menu-card">
+                <img src="img/gambar vila ajemtrip.jpg" alt="Aqua Botol" class="menu-card-img">
+                <h3 class="menu-card-title">- Booking Villa Penginapan -</h3>
+                <p class="menu-card-price"> </p>
+            </div>
+
+            <div class="menu-card">
+                <img src="img/gambar penerbangan ajemtrip.jpg" alt="Rokok Sampoerna" class="menu-card-img">
+                <h3 class="menu-card-title">- Booking Penerbangan -</h3>
+                <p class="menu-card-price"> </p>
+            </div>
+
+            <div class="menu-card">
+                <img src="img/gambar hotel ajemtrip.jpg" alt="Sampo Lifebouy" class="menu-card-img">
+                <h3 class="menu-card-title">- Booking Hotel Penginapan -</h3>
+                <p class="menu-card-price"> </p>
+            </div>
+           
+            <div class="menu-card">
+                <img src="img/gambar perjalanan bus ajemtrip.jpeg" alt="Mie indomie Rebus" class="menu-card-img">
+                <h3 class="menu-card-title">- Booking Perjalanan -</h3>
+                <p class="menu-card-price"> </p>
+            </div>
+        </div>
+    </section>
+    <!-- Menu Section End -->
+
+ <!-- About Section start -->
+ <section id="about" class="about">
+    <h2><span>About</span>Us</h2>
+
+    <div class="row">
+        <div class="about-img">
+            <img src="img/Logo Ajem trip.png" alt="About Me">
+        </div>
+        <div class="content">
+            <h3>Kenapa dinamain AjemTrip?</h3>
+            <p>AjemTrip merupakan sebuah platfrom web yang menyediakan penginapan dan perjalanan anda di Indonesia.
+                AjemTrip membantu Anda merencanakan penginapan serta perjalanan dengan memberikan rekomendasi yang personal, 
+                termasuk destinasi, hotel, penerbangan, restoran, dan atraksi.</p>
+            <p> Semua informasi terkait perjalanan dapat dikelola dalam satu tempat 
+                yang mudah diakses. Jadi, jika Anda ingin pengalaman perjalanan yang lebih efisien dan disesuaikan, 
+                kunjungi AjemTrip! 🌍✈️ </p>
+        </div>
+    </div>
+
+</section>
+<!-- About Section end -->
+
+    <!-- Footer Start-->
+    <footer>
+        <div class="socials">
+            <a href="https://www.instagram.com/faoezan.a/?hl=en"><i data-feather="instagram"></i></a>
+            <a href="#"><i data-feather="twitter"></i></a>
+            <a href="#"><i data-feather="facebook"></i></a>
+        </div>
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#menu">Holiday</a>
+            <a href="#about">About Us</a>
+        </div>
+        <div class="credit">
+            <p> &copy; 2024 <a href="">AjemTrip. All Rights Reserved</a></p>
+        </div>
+    </footer>
+    <!-- Footer End-->
+
+    <!--Feather Icon me-->
+    <script>
+        feather.replace();
+    </script>
+
+    <!-- My Javascript-->
+    <script src="./js/daftar.js"></script>
+    <script src="./js/auth.js"></script>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            try {
+                AjemAuth.login(document.getElementById('login-email').value.trim().toLowerCase(), document.getElementById('login-password').value, document.getElementById('remember-me').checked);
+                window.location.href = './akun.html';
+            } catch (error) {
+                alert(error.message);
+            }
+        });
+        document.getElementById('notif').onclick = () => {
+            window.location.href = './page/notif.html';
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Akun | AjemTrip</title>
+    <link rel="stylesheet" href="../css/regis.css">
+    <link rel="shortcut icon" href="../img/Logo Ajem trip.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <section class="login">
+            <h1>Daftar Akun</h1>
+            <h5>Lengkapi data untuk membuat akun AjemTrip.</h5>
+            <div class="login-form">
+                <form id="register-form">
+                    <div class="input-group"><label for="username">Username</label><input type="text" id="username" required></div>
+                    <div class="input-group"><label for="fullName">Nama Lengkap</label><input type="text" id="fullName" required></div>
+                    <div class="input-group"><label for="phone">Nomor Telepon</label><input type="tel" id="phone" required></div>
+                    <div class="input-group"><label for="email">Email</label><input type="email" id="email" required></div>
+                    <div class="input-group"><label for="password">Password</label><input type="password" id="password" minlength="6" required></div>
+                    <div class="input-group"><label for="confirmPassword">Konfirmasi Password</label><input type="password" id="confirmPassword" minlength="6" required></div>
+                    <button type="submit" class="submit-button">Register</button>
+                    <button type="button" class="daftar-button" onclick="window.location.href='../indeks.html'">Sudah Punya Akun?</button>
+                </form>
+            </div>
+        </section>
+        <section class="gambar"><img src="../img/page-banner.jpg" alt="Pemandangan perjalanan"></section>
+    </main>
+    <script src="../js/auth.js"></script>
+    <script>
+        document.getElementById('register-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const password = document.getElementById('password').value;
+            if (password !== document.getElementById('confirmPassword').value) {
+                alert('Konfirmasi password tidak sama.');
+                return;
+            }
+            try {
+                AjemAuth.register({
+                    username: document.getElementById('username').value.trim(),
+                    fullName: document.getElementById('fullName').value.trim(),
+                    phone: document.getElementById('phone').value.trim(),
+                    email: document.getElementById('email').value.trim().toLowerCase(),
+                    password
+                });
+                alert('Registrasi berhasil. Selamat datang!');
+                window.location.href = '../akun.html';
+            } catch (error) {
+                alert(error.message);
+            }
+        });
+    </script>
+</body>
+</html>
