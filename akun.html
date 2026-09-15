@@ -163,7 +163,7 @@
         const profile = AjemAuth.currentUser();
         document.getElementById('profileContent').innerHTML = profile
             ? `<h3>${profile.fullName}</h3><p><strong>Username:</strong> ${profile.username}</p><p><strong>Email:</strong> ${profile.email}</p><p><strong>Telepon:</strong> ${profile.phone}</p><p><strong>Status:</strong> Akun aktif</p>`
-            : '<p>Anda belum login. Silakan masuk untuk melihat data pribadi.</p><p><a href="./indeks.html">Masuk ke akun</a></p>';
+            : '<p>Anda belum login. Silakan masuk untuk melihat data pribadi.</p><p><a href="./index.html">Masuk ke akun</a></p>';
         const ticket = JSON.parse(localStorage.getItem('ajemtrip_ticket') || 'null');
         const ticketContent = document.getElementById('ticketContent');
         if (ticket) {

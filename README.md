@@ -16,7 +16,7 @@ pesawat, kereta, dan bus.
 ## Menjalankan secara lokal
 
 Karena aplikasi menggunakan `localStorage`, website dapat dibuka langsung melalui
-`indeks.html`. Untuk hasil yang lebih konsisten, gunakan static server sederhana,
+`index.html`. Untuk hasil yang lebih konsisten, gunakan static server sederhana,
 misalnya ekstensi **Live Server** di VS Code.
 
 > Data akun dan pemesanan pada versi demo disimpan di browser pengguna. Jangan
@@ -25,7 +25,7 @@ misalnya ekstensi **Live Server** di VS Code.
 
 ## Demo
 
-1. Buka `indeks.html`.
+1. Buka `index.html`.
 2. Pilih **Register** dan buat akun.
 3. Login menggunakan akun tersebut.
 4. Cari perjalanan, pilih penawaran, isi data, dan selesaikan simulasi pembayaran.

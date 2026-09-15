@@ -16,7 +16,7 @@
             <label for="confirmPassword">Konfirmasi Password</label><input type="password" id="confirmPassword" minlength="6" required>
             <button type="submit">Simpan Password Baru</button>
         </form>
-        <p><a href="../indeks.html">Kembali ke login</a></p>
+        <p><a href="../index.html">Kembali ke login</a></p>
     </main>
     <script src="../js/auth.js"></script>
     <script>
@@ -29,7 +29,7 @@
             try {
                 AjemAuth.updatePassword(document.getElementById('email').value.trim().toLowerCase(), document.getElementById('newPassword').value);
                 alert('Password berhasil diubah. Silakan login kembali.');
-                window.location.href = '../indeks.html';
+                window.location.href = '../index.html';
             } catch (error) {
                 alert(error.message);
             }
