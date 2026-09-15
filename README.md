@@ -34,5 +34,7 @@ misalnya ekstensi **Live Server** di VS Code.
 ## Deployment
 
 Repository ini disiapkan untuk GitHub Pages melalui workflow pada
-`.github/workflows/pages.yml`. Setelah workflow selesai, halaman publik tersedia
-di `https://azimaf.github.io/Travel-Ajem-Trip/`.
+`.github/workflows/pages.yml`. Untuk mengaktifkannya, buka **Settings → Pages**
+di repository GitHub, pilih **GitHub Actions** sebagai source, lalu jalankan
+workflow `Deploy AjemTrip to GitHub Pages`. Setelah aktif, halaman publik
+tersedia di `https://azimaf.github.io/Travel-Ajem-Trip/`.
