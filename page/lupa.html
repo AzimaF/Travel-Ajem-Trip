@@ -12,13 +12,14 @@
         <p>Masukkan email dan password baru Anda.</p>
         <form id="forgot-password-form">
             <label for="email">Email</label><input type="email" id="email" required>
-            <label for="newPassword">Password Baru</label><input type="password" id="newPassword" minlength="6" required>
-            <label for="confirmPassword">Konfirmasi Password</label><input type="password" id="confirmPassword" minlength="6" required>
+            <label for="newPassword">Password Baru</label><div class="password-input"><input type="password" id="newPassword" minlength="6" required><button type="button" data-password-toggle="newPassword" aria-label="Tampilkan password">Lihat</button></div>
+            <label for="confirmPassword">Konfirmasi Password</label><div class="password-input"><input type="password" id="confirmPassword" minlength="6" required><button type="button" data-password-toggle="confirmPassword" aria-label="Tampilkan password">Lihat</button></div>
             <button type="submit">Simpan Password Baru</button>
         </form>
         <p><a href="../index.html">Kembali ke login</a></p>
     </main>
     <script src="../js/auth.js"></script>
+    <script src="../js/password-toggle.js"></script>
     <script>
         document.getElementById('forgot-password-form').addEventListener('submit', (event) => {
             event.preventDefault();
@@ -27,9 +28,15 @@
                 return;
             }
             try {
-                AjemAuth.updatePassword(document.getElementById('email').value.trim().toLowerCase(), document.getElementById('newPassword').value);
-                alert('Password berhasil diubah. Silakan login kembali.');
-                window.location.href = '../index.html';
+                const email = document.getElementById('email').value.trim().toLowerCase();
+                AjemAuth.updatePassword(email, document.getElementById('newPassword').value);
+                const subject = encodeURIComponent('Konfirmasi perubahan password AjemTrip');
+                const body = encodeURIComponent('Password akun AjemTrip Anda baru saja berhasil diubah.');
+                window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+                setTimeout(() => {
+                    alert('Password berhasil diubah. Aplikasi email dibuka untuk mengirim konfirmasi ke email Anda.');
+                    window.location.href = '../index.html';
+                }, 500);
             } catch (error) {
                 alert(error.message);
             }

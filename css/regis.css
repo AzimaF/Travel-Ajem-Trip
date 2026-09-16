@@ -72,6 +72,23 @@ main {
     padding: 0 0.5rem;
     font-size: 1rem;
 }
+.password-input { position: relative; }
+.password-input input { padding-right: 4.5rem; }
+.password-input button {
+    position: absolute;
+    top: 0.35rem;
+    right: 0.45rem;
+    width: auto;
+    height: 2.1rem;
+    margin: 0;
+    padding: 0 0.6rem;
+    border: 0;
+    border-radius: 0.5rem;
+    color: var(--color-yellow);
+    background: #eef6ff;
+    font-size: .8rem;
+    cursor: pointer;
+}
 #jenisKelamin {
     width: 97%;
     height: 2.8rem;
