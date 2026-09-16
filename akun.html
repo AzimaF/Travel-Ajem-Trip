@@ -132,6 +132,11 @@
     <div class="row" id="ticketContent"></div>
 </section>
 
+<section id="receipt" class="receipt-section">
+    <h2><span>Struk</span> Pembayaran</h2>
+    <div id="receiptContent"></div>
+</section>
+
     <!-- Footer Start-->
     <footer>
         <div class="socials">
@@ -166,11 +171,17 @@
             : '<p>Anda belum login. Silakan masuk untuk melihat data pribadi.</p><p><a href="./index.html">Masuk ke akun</a></p>';
         const ticket = JSON.parse(localStorage.getItem('ajemtrip_ticket') || 'null');
         const ticketContent = document.getElementById('ticketContent');
+        const receiptContent = document.getElementById('receiptContent');
         if (ticket) {
             ticketContent.innerHTML = `<div class="hotel"><div class="barcode"><img src="./img/barcode.png" class="img-barcode" alt="Barcode tiket"></div><div class="result-item"><h3>${ticket.name}</h3><p>Kode tiket: <strong>${ticket.code}</strong></p><p>Rute: ${ticket.origin} → ${ticket.destination}</p><p>Keberangkatan: ${ticket.checkInDate}</p><p>Status: ${ticket.status}</p><p>Total: Rp${(ticket.price * ticket.quantity).toLocaleString('id-ID')}</p></div><div class="cek"><a href="./page/pengulangan.html" id="ceklis" aria-label="Kelola tiket"><i data-feather="chevron-right"></i></a></div></div>`;
+            const paidAt = new Date(ticket.paidAt || Date.now());
+            const formattedDate = paidAt.toLocaleString('id-ID', { dateStyle: 'long', timeStyle: 'short' });
+            const paymentReference = ticket.paymentReference || `PAY-${ticket.code}`;
+            receiptContent.innerHTML = `<article class="receipt-card" id="printableReceipt"><div class="receipt-head"><div><strong>Ajem<span>Trip</span></strong><small>BUKTI PEMBAYARAN</small></div><span class="receipt-status">${ticket.status}</span></div><div class="receipt-line"></div><div class="receipt-grid"><p><small>Nomor struk</small><strong>${paymentReference}</strong></p><p><small>Tanggal pembayaran</small><strong>${formattedDate}</strong></p><p><small>Nama pemesan</small><strong>${ticket.customerName}</strong></p><p><small>Metode pembayaran</small><strong>${ticket.paymentMethod || 'Kartu Bank'}</strong></p><p><small>Layanan</small><strong>${ticket.name}</strong></p><p><small>Kode tiket</small><strong>${ticket.code}</strong></p><p><small>Rute</small><strong>${ticket.origin} → ${ticket.destination}</strong></p><p><small>Jumlah</small><strong>${ticket.quantity} tiket/kamar</strong></p></div><div class="receipt-total"><span>Total dibayar</span><strong>Rp${(ticket.price * ticket.quantity).toLocaleString('id-ID')}</strong></div><p class="receipt-note">Simpan struk ini sebagai bukti pembayaran AjemTrip.</p></article><button class="print-receipt" type="button" onclick="window.print()">Cetak / Simpan PDF</button>`;
             feather.replace();
         } else {
             ticketContent.innerHTML = '<p class="empty-ticket">Belum ada tiket. Yuk mulai perjalananmu sekarang!</p>';
+            receiptContent.innerHTML = '<p class="empty-ticket">Struk pembayaran akan muncul setelah pembayaran berhasil.</p>';
         }
     </script>
 </body>

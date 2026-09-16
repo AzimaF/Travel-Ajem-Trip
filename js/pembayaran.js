@@ -14,8 +14,16 @@ document.getElementById('payment-form').addEventListener('submit', (event) => {
         alert('Detail pesanan tidak ditemukan.');
         return;
     }
-    const ticket = { ...booking, status: 'Lunas', code: `AJM-${Date.now().toString().slice(-6)}` };
+    const paidAt = new Date();
+    const ticket = {
+        ...booking,
+        status: 'Lunas',
+        code: `AJM-${Date.now().toString().slice(-6)}`,
+        paidAt: paidAt.toISOString(),
+        paymentMethod: 'Kartu Bank',
+        paymentReference: `PAY-${Date.now().toString().slice(-8)}`
+    };
     localStorage.setItem('ajemtrip_ticket', JSON.stringify(ticket));
-    alert(`Pembayaran berhasil. Kode tiket: ${ticket.code}`);
+    alert(`Pembayaran berhasil. Struk tersedia di halaman akun dengan kode ${ticket.code}.`);
     window.location.href = '../akun.html';
 });
