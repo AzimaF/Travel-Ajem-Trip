@@ -203,6 +203,15 @@ display: flex;
     background: #eaf6fd;
     font-size: 11px;
 }
+#login-form .password-input button svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
 
 #login-form button {
     width: 100%;
