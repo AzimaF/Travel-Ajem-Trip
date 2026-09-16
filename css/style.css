@@ -195,13 +195,18 @@ display: flex;
     position: absolute;
     top: 10px;
     right: 0;
-    width: auto;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    transform: translateY(-50%);
+    top: 50%;
     margin: 0;
-    padding: 10px 8px;
-    border-radius: 5px;
+    padding: 0;
+    border-radius: 6px;
     color: #0877b8;
-    background: #eaf6fd;
-    font-size: 11px;
+    background: transparent !important;
+    font-size: 0;
 }
 #login-form .password-input button svg {
     width: 17px;
